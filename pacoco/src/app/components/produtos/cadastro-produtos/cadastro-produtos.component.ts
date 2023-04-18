@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-cadastro-produtos',
@@ -22,4 +23,13 @@ export class CadastroProdutosComponent  implements OnInit {
   apenasNumero(event:any) {
     return (event.keyCode >= 48 && event.keyCode <= 57)
   }
+
+  salvarProduto(): void{
+    if(this.formProduto.valid){
+
+    }else{
+      
+    }
+  }
+
 }

@@ -24,6 +24,6 @@
     </form>
   </ion-card-content>
   <ion-footer>
-    <ion-button expand="block">Enviar</ion-button>
+    <ion-button (click)="salvarProduto()" [disabled]="this.formProduto.invalid" expand="block">Enviar</ion-button>
   </ion-footer>
 </ion-card>
