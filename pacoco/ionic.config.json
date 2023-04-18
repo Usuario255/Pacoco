@@ -1,0 +1,7 @@
+{
+  "name": "Pacoco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

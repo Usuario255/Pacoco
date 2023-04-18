@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ 
+  <ion-content *ngIf="folder == 'home'" [fullscreen]="true">
+    <app-home></app-home>
+  </ion-content>
+  <ion-content *ngIf="folder == 'cadastro-consumidor'" [fullscreen]="true">
+    <app-cadastro-consumidor></app-cadastro-consumidor>
+  </ion-content>
+  <ion-content *ngIf="folder == 'cadastro-produto'" [fullscreen]="true">
+   <app-cadastro-produtos></app-cadastro-produtos>
+  </ion-content>

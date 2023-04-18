@@ -1,0 +1,37 @@
+<p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Consumidores</ion-card-title>
+      <ion-card-subtitle>Consumo Individual </ion-card-subtitle>
+      <ion-button fill="clear" (click)="salvarConsumidor()">Adicionar</ion-button>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let consumidor of listaConsumidores">
+          <ion-label>Nome: {{consumidor.Nome}}</ion-label>
+          <ion-label>Gasto: {{consumidor.Gasto}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Produtos</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-button fill="clear" (click)="salvarProduto()">Adicionar</ion-button>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let produto of listaProdutos">
+          <ion-thumbnail slot="start">
+          </ion-thumbnail>
+          <ion-label>Nome: {{produto.Nome}}</ion-label>
+          <ion-label>Gasto: {{produto.Valor}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</p>

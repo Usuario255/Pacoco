@@ -1,0 +1,44 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Cadastrar um Consumidor</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="form">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input minlength="4" formControlName="nome"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Gênero</ion-label>
+            <ion-select formControlName="genero" interface="popover" placeholder="Gênero">
+              <ion-select-option *ngFor="let genero of listaGenero" [value]="genero">{{genero}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label  position="floating">Celular</ion-label>
+            <ion-input   formControlName="celular"></ion-input>
+          
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card-content>
+  <ion-footer>
+    <ion-button (click)="enviarConsumidor()" expand="block">Enviar</ion-button>
+  </ion-footer>
+</ion-card>
