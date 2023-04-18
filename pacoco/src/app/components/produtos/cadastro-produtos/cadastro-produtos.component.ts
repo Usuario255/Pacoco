@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-produtos',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroProdutosComponent  implements OnInit {
 
-  constructor() { }
+  formProduto!: FormGroup;
+
+  constructor(private fb: FormBuilder) { 
+    this.formProduto = fb.group({
+      Valor: ['',Validators.required],
+      Nome: ['',Validators.required],
+    })
+  }
 
   ngOnInit() {}
 
+  apenasNumero(event:any) {
+    return (event.keyCode >= 48 && event.keyCode <= 57)
+  }
 }

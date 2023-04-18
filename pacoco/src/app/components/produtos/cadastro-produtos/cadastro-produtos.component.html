@@ -1,3 +1,29 @@
-<p>
-  cadastro-produtos works!
-</p>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Cadastrar um Consumidor</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="formProduto">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input minlength="4" formControlName="Nome"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Valor</ion-label>
+            <ion-input (keypress)="apenasNumero($event)" formControlName="Valor"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card-content>
+  <ion-footer>
+    <ion-button expand="block">Enviar</ion-button>
+  </ion-footer>
+</ion-card>
