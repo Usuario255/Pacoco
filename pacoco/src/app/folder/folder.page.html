@@ -17,6 +17,9 @@
   <ion-content *ngIf="folder == 'consumidor'" [fullscreen]="true">
     <app-consumidor></app-consumidor>
   </ion-content>
+  <ion-content *ngIf="folder == 'produto'" [fullscreen]="true">
+    <app-produtos></app-produtos>
+  </ion-content>
   <ion-content *ngIf="folder == 'cadastro-produto'" [fullscreen]="true">
    <app-cadastro-produtos></app-cadastro-produtos>
   </ion-content>

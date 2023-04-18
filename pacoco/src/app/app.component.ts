@@ -13,7 +13,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/pacoco/home', icon: 'home' },
     { title: 'Consumidores', url: '/pacoco/consumidor', icon: 'person' },
-    { title: 'Produto', url: '/pacoco/porduto', icon: 'bag' },
+    { title: 'Produto', url: '/pacoco/produto', icon: 'bag' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}

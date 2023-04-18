@@ -1,3 +1,12 @@
-<p>
-  produtos works!
-</p>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-item id="alert-excluir" *ngFor="let produto of listaProduto; let index">
+          <ion-label>{{produto.Nome}}</ion-label>
+          <ion-button size="small"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
